@@ -1,87 +1,46 @@
 <?php
- 
-require_once "../../classes/aluno.php";
- 
-$aluno = new Professor();
- 
+require_once "../../classes/professor.php";
+
+$professor = new Professor();
+
 $id = $_GET['id'];
- 
-$dados = $aluno->buscarPorId($id);
- 
+
+
+$dado = $professor->buscarPorId($id);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $aluno->editar(
+
+    $professor->editar(
         $id,
-        $_POST['nome'],        
+        $_POST['nome'],
         $_POST['cpf'],
         $_POST['telefone'],
-        $_POST['endereco']
-
+        $_POST['especialidade']
     );
- 
+
     header("Location: listar.php");
     exit;
 }
- 
 include "../../includes/header.php";
 include "../../includes/menu.php";
- 
+
 ?>
- 
-<h2>Editar Aluno</h2>
- 
+
+<h2>Editar Professor</h2>
+
 <form method="POST">
- 
-    <p>
-        Nome:<br>
-        <input
-            type="text"
-            name="nome"
-            value="<?= $dados['nome']; ?>"
-            required>
-    </p>
- 
-    <p>
-        Data Nascimento:<br>
-        <input
-            type="date"
-            name="data_nasc"
-            value="<?= $dados['data_nasc']; ?>"
-            required>
-    </p>
- 
-    <p>
-        CPF:<br>
-        <input
-            type="text"
-            name="cpf"
-            value="<?= $dados['cpf']; ?>"
-            required>
-    </p>
- 
-    <p>
-        Endereço:<br>
-        <input
-            type="text"
-            name="endereco"
-            value="<?= $dados['endereco']; ?>">
-    </p>
- 
-    <p>
-        Telefone:<br>
-        <input
-            type="text"
-            name="telefone"
-            value="<?= $dados['telefone']; ?>">
-    </p>
- 
-    <br>
- 
-    <button type="submit">
-        Atualizar
-    </button>
- 
+
+<p><label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" value="<?= $dado['nome'] ?>" required></p>
+
+<p><label for="cpf">CPF:</label>
+<input type="text" id="cpf" name="cpf" value="<?= $dado['cpf'] ?>" required></p>
+
+<p><label for="telefone">Telefone:</label>
+<input type="text" id="telefone" name="telefone" value="<?= $dado['telefone'] ?>" required></p>
+
+<p><label for="especialidade">Especialidade:</label>
+<input type="text" id="especialidade" name="especialidade" value="<?= $dado['especialidade'] ?>" required></p>
+
+<button type="submit">Editar</button>
 </form>
- 
-<?php
-include "../../includes/footer.php";
-?>

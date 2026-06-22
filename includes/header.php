@@ -10,11 +10,12 @@
  
       <title>Sistema Escolar</title>
  
-      <link rel="stylesheet" href="/escola/assets/css/style.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
  
 </head>
  
 <body>
  
  
-      <main></main>
+      <main>
+ 

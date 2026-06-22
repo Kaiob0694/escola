@@ -88,6 +88,16 @@ include "../includes/menu.php";
                     </a>
                 </td>
             </tr>
+
+            <tr>
+                <td>Status Alunos</td>
+                <td>
+                    <a class="editar"
+                        href="status_aluno.php">
+                        Visualizar
+                    </a>
+                </td>
+            </tr>
  
         </table>
  
@@ -100,3 +110,4 @@ include "../includes/menu.php";
 include "../includes/footer.php";
  
 ?>
+ 

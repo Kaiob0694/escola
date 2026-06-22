@@ -10,3 +10,5 @@ $matricula->excluir($id);
  
 header("Location: listar.php");
 exit;
+ 
+ 

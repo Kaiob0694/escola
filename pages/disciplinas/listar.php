@@ -25,7 +25,7 @@ include "../../includes/menu.php";
         <table border="1">
  
             <tr>
-                <th>ID</th>
+                
                 <th>Disciplina</th>
                 <th>Carga Horária</th>
                 <th>Professor</th>
@@ -36,7 +36,7 @@ include "../../includes/menu.php";
  
                 <tr>
  
-                    <td><?= $linha['id_disciplina'] ?></td>
+                    
                     <td><?= $linha['nome_disciplina'] ?></td>
                     <td><?= $linha['carga_horaria'] ?></td>
                     <td><?= $linha['professor'] ?></td>

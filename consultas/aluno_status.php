@@ -4,29 +4,27 @@ require_once "../classes/consulta.php";
  
 $consulta = new Consulta();
  
-$dados = $consulta->matriculasCompletas();
+$dados = $consulta->alunosTurma();
  
 include "../includes/header.php";
 include "../includes/menu.php";
 ?>
  
-<h2>Matrículas Completas</h2>
+<h2>Alunos Status</h2>
  
 <table border="1">
  
     <tr>
         <th>Aluno</th>
         <th>Turma</th>
-        <th>Professor</th>
         <th>Status</th>
     </tr>
  
     <?php foreach ($dados as $linha): ?>
  
         <tr>
-            <td><?= $linha['aluno'] ?></td>
+            <td><?= $linha['nome'] ?></td>
             <td><?= $linha['nome_turma'] ?></td>
-            <td><?= $linha['professor'] ?></td>
             <td><?= $linha['status'] ?></td>
         </tr>
  
@@ -35,4 +33,3 @@ include "../includes/menu.php";
 </table>
  
 <?php include "../includes/footer.php"; ?>
- 

@@ -10,14 +10,12 @@ include "../includes/header.php";
 include "../includes/menu.php";
 ?>
  
-<h2>Matrículas Completas</h2>
+<h2>Status Alunos</h2>
  
 <table border="1">
  
     <tr>
         <th>Aluno</th>
-        <th>Turma</th>
-        <th>Professor</th>
         <th>Status</th>
     </tr>
  
@@ -25,8 +23,6 @@ include "../includes/menu.php";
  
         <tr>
             <td><?= $linha['aluno'] ?></td>
-            <td><?= $linha['nome_turma'] ?></td>
-            <td><?= $linha['professor'] ?></td>
             <td><?= $linha['status'] ?></td>
         </tr>
  

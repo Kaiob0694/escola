@@ -6,6 +6,8 @@ class Conexao
     private $dbname = "escola";
     private $usuario = "root";
     private $senha = "1234";
+
+    private \PDO $conexao;
  
     public function conectar()
     {

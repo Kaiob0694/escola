@@ -26,7 +26,7 @@ include "../../includes/menu.php";
         <table border="1">
  
             <tr>
-                <th>ID</th>
+                
                 <th>Aluno</th>
                 <th>Turma</th>
                 <th>Data</th>
@@ -38,7 +38,7 @@ include "../../includes/menu.php";
  
                 <tr>
  
-                    <td><?= $linha['id_matricula'] ?></td>
+                    
                     <td><?= $linha['aluno'] ?></td>
                     <td><?= $linha['nome_turma'] ?></td>
                     <td><?= $linha['data_matricula'] ?></td>

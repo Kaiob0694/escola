@@ -25,7 +25,7 @@ include "../../includes/menu.php";
         <table border="1">
  
             <tr>
-                <th>ID</th>
+                
                 <th>Turma</th>
                 <th>Série</th>
                 <th>Ano Letivo</th>
@@ -37,7 +37,7 @@ include "../../includes/menu.php";
  
                 <tr>
  
-                    <td><?= $linha['id_turma'] ?></td>
+                    
                     <td><?= $linha['nome_turma'] ?></td>
                     <td><?= $linha['serie'] ?></td>
                     <td><?= $linha['ano_letivo'] ?></td>
@@ -69,3 +69,4 @@ include "../../includes/menu.php";
 </div>
  
 <?php include "../../includes/footer.php"; ?>
+ 
