@@ -26,6 +26,25 @@ include "../../includes/menu.php";
 
         <br><br>
 
+        <?php if (isset($_GET['msg']) && $_GET['msg'] === 'excluido'): ?>
+            <p style="color: green; font-weight: bold;">
+                Professor excluído com sucesso!
+            </p>
+        <?php endif; ?>
+
+        <?php if (isset($_GET['erro']) && $_GET['erro'] === 'vinculo'): ?>
+            <p style="color: red; font-weight: bold;">
+                Não é possível excluir: este professor está vinculado a uma turma ou disciplina.
+                Remova o vínculo antes de excluir.
+            </p>
+        <?php endif; ?>
+
+        <?php if (isset($_GET['erro']) && $_GET['erro'] === 'falha'): ?>
+            <p style="color: red; font-weight: bold;">
+                Erro ao excluir o professor. Tente novamente.
+            </p>
+        <?php endif; ?>
+
         <table border="1">
 
             <tr>
